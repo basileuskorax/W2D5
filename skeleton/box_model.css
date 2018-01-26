@@ -1,0 +1,44 @@
+div {
+}
+
+#first-div {
+  background-color: #39cccc;
+  height: auto;
+  width: auto;
+  padding: 50px;
+  border: 5px solid black;
+  /* overflow: auto; */
+  margin: flex;
+  max-width: 100px;
+  max-height: 1000px;
+
+
+}
+
+#second-div {
+  background-color: #ff4136;
+  height: 200px;
+  width: 200px;
+  padding: 50px;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+#third-div{
+  height: 600px;
+  width: 200px;
+  background-color: crimson;
+  width:auto;
+  display: inline-block;
+}
+
+.image1 {
+  width: 100%;
+}
+.image2 {
+  width: 200px;
+}
+
+p {
+  background-color: #7fdbff;
+}
