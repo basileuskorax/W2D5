@@ -45,12 +45,18 @@ class LinkedList
   end
 
   def get(key)
-    each{ |node| return node.val if node.key == key }
-    nil
+    each do |node|
+      next if node.val.nil?
+      return node.val if node.key == key
+    end
   end
 
   def include?(key)
-    each{ |node| return true if node.key == key }
+    each do |node|
+      next if node.key.nil?
+      return true if node.key == key
+    end
+
     false
   end
 
@@ -72,17 +78,18 @@ class LinkedList
       if node.key == key
         node.next.prev = node.prev
         node.prev.next = node.next
+        node.key = nil
+        node.val = nil
       end
     end
   end
 
   def each
-    yield(first)
-    next_node = first.next
+    node = first
 
-    until next_node == @tail
-      yield(next_node)
-      next_node = next_node.next
+    until node == @tail
+      yield(node)
+      node = node.next
     end
   end
 
